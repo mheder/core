@@ -3,6 +3,14 @@
 ## About core
 core is a bunch of php files that help you with SQL commands, UI translations, logging and some other aspects of php application development
 
+## using core
+
+Just create a php file e.g. in the root of your project and include 
+```
+include "core/init_core.php";
+```
+to access the functions
+
 ### conf.php
 You can configure the basic aspects of the application in conf.php. These are the baseurl, some theming and branding, html, css files, database connection, other secrets, attribute mapping to environment variables, email and other basic aspects.
 

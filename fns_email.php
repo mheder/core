@@ -31,7 +31,13 @@ function core_send_email($to, $subject, $message, $html = false) {
     }
     $headers[] = 'From: ' . $GLOBALS['kiss']['email_from'];
 
-    mail($to, $subject, $message, $headers);
+    // php mail method
+    if ($GLOBALS['core']['email_method'] == "php_mail") {
+        mail($to, $subject, $message, $headers);
+    } else {
+        core_log_debug("No known email_method configured, dumping mail to log.");
+        core_log_debug("to:$to, subject:$subject, message:$message");
+    }
 
 }
 

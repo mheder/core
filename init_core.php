@@ -23,6 +23,7 @@ require_once "core/fns_lang.php";
 require_once "core/fns_env.php";
 require_once "core/fns_log.php";
 require_once "core/fns_misc.php";
+require_once "core/fns_email.php";
 
 include "conf.php";
 
